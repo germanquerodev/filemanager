@@ -33,8 +33,9 @@ int main(int argc, char **argv)
     std::cout << "Liberando lista de ficheros:\n";
     freeListedFiles(vfiles);
     std::cout << "Liberando datos de fichero leído:\n";
+    
     delete[] data;
-
+    
     delete fm;
     return 0;
 }

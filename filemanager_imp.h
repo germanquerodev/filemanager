@@ -79,6 +79,9 @@ public:
 
 			// desempaqueta la matriz
 			packv(rpcOut, data, fileLen);
+
+			// libera memoria de data
+			delete[] data;
 		}
 		break;
 		case writeFileOp:
@@ -95,6 +98,9 @@ public:
 			p->writeFile((char *)fileName.data(), data, fileLen);
 			// empaqueta el ok
 			pack(rpcOut, (unsigned char)MSG_OK);
+			
+			// libera memoria de data
+			delete[] data;
 		}
 		break;
 

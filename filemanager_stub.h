@@ -163,6 +163,7 @@ public:
 				char *name = new char[s];
 				unpackv(rpcIn, name, s);
 				flist->push_back(new std::string(name));
+				delete[] name;
 			}
 			return flist;
 		}
